@@ -1,0 +1,92 @@
+/* Login form role dropdown styling */
+.tourmaster-login-role {
+    margin-bottom: 20px;
+}
+
+.tourmaster-login-role label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.tourmaster-login-role select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.tourmaster-login-role select:focus {
+    outline: none;
+    border-color: #007cba;
+    box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.2);
+}
+
+.tourmaster-login-role select option {
+    padding: 8px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* User dropdown styling */
+.tourmaster-user-top-bar-user {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.tourmaster-user-top-bar-user:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tourmaster-user-top-bar-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+    z-index: 1000;
+    display: none;
+}
+
+.tourmaster-user-top-bar-user:hover + .tourmaster-user-top-bar-dropdown,
+.tourmaster-user-top-bar-dropdown:hover {
+    display: block;
+}
+
+.tourmaster-user-top-bar-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tourmaster-user-top-bar-dropdown li {
+    border-bottom: 1px solid #eee;
+}
+
+.tourmaster-user-top-bar-dropdown li:last-child {
+    border-bottom: none;
+}
+
+.tourmaster-user-top-bar-dropdown a {
+    display: block;
+    padding: 12px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.tourmaster-user-top-bar-dropdown a:hover {
+    background-color: #f5f5f5;
+    color: #007cba;
+} 
+

@@ -1,0 +1,292 @@
+/*
+Modern Student Dashboard Styles
+*/
+
+:root {
+    --primary-black: #181818;
+    --primary-grey: #f8f9fa;
+    --secondary-grey: #e9ecef;
+    --primary-white: #fff;
+    --accent-grey: #6c757d;
+    --primary-gradient: linear-gradient(135deg, var(--primary-black), var(--accent-grey));
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --info: #17a2b8;
+}
+
+body {
+    background: var(--primary-grey);
+    color: var(--primary-black);
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 2rem;
+}
+
+.navbar {
+    background: var(--primary-black);
+    color: var(--primary-white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    color: var(--primary-white);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--primary-white);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--primary-white);
+}
+
+.card {
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.profile-card {
+    background: var(--primary-white);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card-header.profile-header {
+    background: var(--primary-black);
+    color: var(--primary-white);
+    padding: 1.5rem;
+    border-radius: 1rem 1rem 0 0 !important;
+    border-bottom: none;
+}
+
+.profile-avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--secondary-grey), var(--accent-grey));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-white);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-upload-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--primary-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: all 0.2s ease;
+}
+
+.profile-upload-overlay:hover {
+    background: var(--accent-grey);
+    transform: scale(1.1);
+}
+
+.form-control {
+    border: 2px solid var(--secondary-grey);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    background: var(--primary-white);
+    color: var(--primary-black);
+    transition: all 0.2s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-black);
+    box-shadow: 0 0 0 4px rgba(24, 24, 24, 0.1);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--primary-black);
+    margin-bottom: 0.5rem;
+}
+
+.btn-save {
+    background: var(--primary-black);
+    color: var(--primary-white);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    letter-spacing: 0.5px;
+    display: none; /* Hidden by default, shown only when form is edited */
+}
+
+.btn-save:hover {
+    background: var(--accent-grey);
+    color: var(--primary-white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(24, 24, 24, 0.15);
+}
+
+.btn-danger {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.alert {
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: var(--secondary-grey);
+    color: var(--primary-black);
+    border: none;
+}
+
+.alert-success {
+    background: rgba(40, 167, 69, 0.1);
+    color: var(--success);
+}
+
+.section-title {
+    color: var(--primary-black);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--secondary-grey);
+    font-size: 1.25rem;
+}
+
+.accordion-button {
+    font-weight: 600;
+    color: var(--primary-black);
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--secondary-grey);
+    color: var(--primary-black);
+}
+
+.list-group-item {
+    border: none;
+    padding: 0.75rem 1rem;
+}
+
+/* Table styles for inquiries and feedback sections */
+.table th {
+    color: var(--primary-black);
+    font-weight: 600;
+    border-top: none;
+    border-bottom: 2px solid var(--secondary-grey);
+}
+
+.table td {
+    color: var(--primary-black);
+    border-top: 1px solid var(--secondary-grey);
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Badge styles for status indicators */
+.badge {
+    font-weight: 600;
+    padding: 0.5em 0.75em;
+    border-radius: 0.5rem;
+}
+
+.bg-warning {
+    color: #212529 !important;
+}
+
+.text-muted {
+    color: var(--accent-grey) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+        font-size: 2rem;
+    }
+    
+    .profile-upload-overlay {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    
+    .card-header.profile-header {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .profile-avatar-container {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .profile-avatar {
+        width: 90px;
+        height: 90px;
+        font-size: 1.75rem;
+    }
+    
+    .profile-upload-overlay {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+    
+    .card-header.profile-header {
+        padding: 1rem;
+    }
+    
+    .card-header.profile-header h3 {
+        font-size: 1.25rem;
+    }
+    
+    .card-header.profile-header p {
+        font-size: 0.9rem;
+    }
+}

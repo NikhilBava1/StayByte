@@ -1,0 +1,229 @@
+    <?php
+    include 'includes/header.php';
+    ?>
+
+            <div class="hotale-page-title-wrap hotale-style-custom hotale-center-align">
+                <div class="hotale-header-transparent-substitute"></div>
+                <div class="hotale-page-title-overlay"></div>
+                <div class="hotale-page-title-container hotale-container">
+                    <div class="hotale-page-title-content hotale-item-pdlr"><h1 class="hotale-page-title">Our Team</h1></div>
+                </div>
+            </div>
+
+            <div class="hotale-page-wrapper" id="hotale-page-wrapper">
+                <div class="gdlr-core-page-builder-body">
+                    <div class="gdlr-core-pbf-wrapper" style="padding: 75px 0px 85px 0px;" data-skin="Personnel" id="gdlr-core-wrapper-1">
+                        <div class="gdlr-core-pbf-background-wrap"></div>
+                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
+                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                                <div class="gdlr-core-pbf-element">
+                                    <div class="gdlr-core-personnel-item gdlr-core-item-pdb clearfix gdlr-core-center-align gdlr-core-personnel-item-style-grid gdlr-core-personnel-style-grid">
+                                        <div class="gdlr-core-personnel-item-holder clearfix">
+                                            <div class="gdlr-core-item-list gdlr-core-personnel-list-column gdlr-core-column-20 gdlr-core-column-first gdlr-core-item-pdlr clearfix">
+                                                <div class="gdlr-core-personnel-list clearfix">
+                                                    <div
+                                                        class="gdlr-core-personnel-list-image gdlr-core-media-image gdlr-core-zoom-on-hover"
+                                                        style="border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px; overflow: hidden;"
+                                                    >
+                                                        <a href="#">
+                                                            <img src="upload/personnel-1-600x600.jpg" alt="" width="600" height="600" title="personnel-1" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="gdlr-core-personnel-list-content-wrap">
+                                                        <h3 class="gdlr-core-personnel-list-title" style="font-size: 26px; font-weight: 500; letter-spacing: 0px; text-transform: none;">
+                                                            <a href="#">Jane Smith</a>
+                                                        </h3>
+                                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 16px; font-weight: 400; font-style: normal;">CEO & Founder</div>
+                                                        <div class="gdlr-core-personnel-list-social">
+                                                        <span class="gdlr-core-social-network-item gdlr-core-item-pdb gdlr-core-none-align gdlr-direction-horizontal" style="padding-bottom: 0px; display: block;">
+                                                                <a href="https://facebook.com/" target="_blank" class="gdlr-core-social-network-icon" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                                                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="twitter"><i class="fab fa-twitter"></i></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gdlr-core-item-list gdlr-core-personnel-list-column gdlr-core-column-20 gdlr-core-item-pdlr clearfix">
+                                                <div class="gdlr-core-personnel-list clearfix">
+                                                    <div
+                                                        class="gdlr-core-personnel-list-image gdlr-core-media-image gdlr-core-zoom-on-hover"
+                                                        style="border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px; overflow: hidden;"
+                                                    >
+                                                        <a href="#">
+                                                            <img src="upload/personnel-2-600x600.jpg" alt="" width="600" height="600" title="personnel-2" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="gdlr-core-personnel-list-content-wrap">
+                                                        <h3 class="gdlr-core-personnel-list-title" style="font-size: 26px; font-weight: 500; letter-spacing: 0px; text-transform: none;">
+                                                            <a href="#">Paul Smith</a>
+                                                        </h3>
+                                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 16px; font-weight: 400; font-style: normal;">General Manager</div>
+                                                        <div class="gdlr-core-personnel-list-social">
+                                                        <span class="gdlr-core-social-network-item gdlr-core-item-pdb gdlr-core-none-align gdlr-direction-horizontal" style="padding-bottom: 0px; display: block;">
+                                                                <a href="https://facebook.com/" target="_blank" class="gdlr-core-social-network-icon" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                                                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="twitter"><i class="fab fa-twitter"></i></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gdlr-core-item-list gdlr-core-personnel-list-column gdlr-core-column-20 gdlr-core-item-pdlr clearfix">
+                                                <div class="gdlr-core-personnel-list clearfix">
+                                                    <div
+                                                        class="gdlr-core-personnel-list-image gdlr-core-media-image gdlr-core-zoom-on-hover"
+                                                        style="border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px; overflow: hidden;"
+                                                    >
+                                                        <a href="#">
+                                                            <img src="upload/personnel-3-600x600.jpg" alt="" width="600" height="600" title="personnel-3" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="gdlr-core-personnel-list-content-wrap">
+                                                        <h3 class="gdlr-core-personnel-list-title" style="font-size: 26px; font-weight: 500; letter-spacing: 0px; text-transform: none;">
+                                                            <a href="#">Alisa Doe</a>
+                                                        </h3>
+                                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 16px; font-weight: 400; font-style: normal;">
+                                                            Chief Financial Officer
+                                                        </div>
+                                                        <div class="gdlr-core-personnel-list-social">
+                                                        <span class="gdlr-core-social-network-item gdlr-core-item-pdb gdlr-core-none-align gdlr-direction-horizontal" style="padding-bottom: 0px; display: block;">
+                                                                <a href="https://facebook.com/" target="_blank" class="gdlr-core-social-network-icon" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                                                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="twitter"><i class="fab fa-twitter"></i></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gdlr-core-item-list gdlr-core-personnel-list-column gdlr-core-column-20 gdlr-core-column-first gdlr-core-item-pdlr clearfix">
+                                                <div class="gdlr-core-personnel-list clearfix">
+                                                    <div
+                                                        class="gdlr-core-personnel-list-image gdlr-core-media-image gdlr-core-zoom-on-hover"
+                                                        style="border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px; overflow: hidden;"
+                                                    >
+                                                        <a href="#">
+                                                            <img src="upload/personnel-4-600x600.jpg" alt="" width="600" height="600" title="personnel-4" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="gdlr-core-personnel-list-content-wrap">
+                                                        <h3 class="gdlr-core-personnel-list-title" style="font-size: 26px; font-weight: 500; letter-spacing: 0px; text-transform: none;">
+                                                            <a href="#">Saul Goodman</a>
+                                                        </h3>
+                                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 16px; font-weight: 400; font-style: normal;">Building Manager</div>
+                                                        <div class="gdlr-core-personnel-list-social">
+                                                        <span class="gdlr-core-social-network-item gdlr-core-item-pdb gdlr-core-none-align gdlr-direction-horizontal" style="padding-bottom: 0px; display: block;">
+                                                                <a href="https://facebook.com/" target="_blank" class="gdlr-core-social-network-icon" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                                                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="twitter"><i class="fab fa-twitter"></i></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gdlr-core-item-list gdlr-core-personnel-list-column gdlr-core-column-20 gdlr-core-item-pdlr clearfix">
+                                                <div class="gdlr-core-personnel-list clearfix">
+                                                    <div
+                                                        class="gdlr-core-personnel-list-image gdlr-core-media-image gdlr-core-zoom-on-hover"
+                                                        style="border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px; overflow: hidden;"
+                                                    >
+                                                        <a href="#">
+                                                            <img src="upload/personnel-5-600x600.jpg" alt="" width="600" height="600" title="personnel-5" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="gdlr-core-personnel-list-content-wrap">
+                                                        <h3 class="gdlr-core-personnel-list-title" style="font-size: 26px; font-weight: 500; letter-spacing: 0px; text-transform: none;">
+                                                            <a href="#">David Wick</a>
+                                                        </h3>
+                                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 16px; font-weight: 400; font-style: normal;">Hr Manager</div>
+                                                        <div class="gdlr-core-personnel-list-social">
+                                                        <span class="gdlr-core-social-network-item gdlr-core-item-pdb gdlr-core-none-align gdlr-direction-horizontal" style="padding-bottom: 0px; display: block;">
+                                                                <a href="https://facebook.com/" target="_blank" class="gdlr-core-social-network-icon" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                                                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="twitter"><i class="fab fa-twitter"></i></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="gdlr-core-item-list gdlr-core-personnel-list-column gdlr-core-column-20 gdlr-core-item-pdlr clearfix">
+                                                <div class="gdlr-core-personnel-list clearfix">
+                                                    <div
+                                                        class="gdlr-core-personnel-list-image gdlr-core-media-image gdlr-core-zoom-on-hover"
+                                                        style="border-radius: 20px; -moz-border-radius: 20px; -webkit-border-radius: 20px; overflow: hidden;"
+                                                    >
+                                                        <a href="#">
+                                                            <img src="upload/personnel-6-600x600.jpg" alt="" width="600" height="600" title="personnel-6" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="gdlr-core-personnel-list-content-wrap">
+                                                        <h3 class="gdlr-core-personnel-list-title" style="font-size: 26px; font-weight: 500; letter-spacing: 0px; text-transform: none;">
+                                                            <a href="#">John Doe</a>
+                                                        </h3>
+                                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 16px; font-weight: 400; font-style: normal;">Marking Leader</div>
+                                                        <div class="gdlr-core-personnel-list-social">
+                                                        <span class="gdlr-core-social-network-item gdlr-core-item-pdb gdlr-core-none-align gdlr-direction-horizontal" style="padding-bottom: 0px; display: block;">
+                                                                <a href="https://facebook.com/" target="_blank" class="gdlr-core-social-network-icon" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                                                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                                                <a href="#" target="_blank" class="gdlr-core-social-network-icon" title="twitter"><i class="fab fa-twitter"></i></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gdlr-core-pbf-wrapper" style="margin: 0px 0px 30px 0px;" id="gdlr-core-wrapper-2">
+                        <div class="gdlr-core-pbf-background-wrap" style="border-radius: 20px 20px 20px 20px; -moz-border-radius: 20px 20px 20px 20px; -webkit-border-radius: 20px 20px 20px 20px; background-color: #f8f8f8;"></div>
+                        <div class="gdlr-core-pbf-wrapper-content gdlr-core-js">
+                            <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                                <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first" id="gdlr-core-column-1">
+                                    <div class="gdlr-core-pbf-column-content-margin gdlr-core-js" style="margin: -120px 0px 0px 0px; padding: 0px 0px 40px 0px;">
+                                        <div class="gdlr-core-pbf-background-wrap"></div>
+                                        <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js">
+                                            <div class="gdlr-core-pbf-element">
+                                                <div
+                                                    class="gdlr-core-title-item gdlr-core-item-pdb clearfix gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr"
+                                                    style="padding-bottom: 45px;"
+                                                    id="gdlr-core-title-item-1"
+                                                >
+                                                    <div class="gdlr-core-title-item-title-wrap">
+                                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title hotale-additional-font class-test" style="font-size: 80px; font-weight: 400; text-transform: none; color: #000000;">
+                                                            Newsletter<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span>
+                                                        </h3>
+                                                    </div>
+                                                    <span
+                                                        class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption"
+                                                        style="font-size: 18px; font-style: normal; letter-spacing: 0px; color: #898989; margin-top: 15px;"
+                                                    >
+                                                        Subscribe the newsletter to get updated to news and promotions
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="gdlr-core-pbf-element">
+                                                <div class="gdlr-core-newsletter-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-style-curve3">
+                                                    <div class="newsletter newsletter-subscription">
+                                                        <form class="gdlr-core-newsletter-form clearfix" method="post" action="#" onsubmit="return newsletter_check(this)">
+                                                            <div class="gdlr-core-newsletter-email">
+                                                                <input class="newsletter-email gdlr-core-skin-e-background gdlr-core-skin-e-content" placeholder="Your Email Address" type="email" name="ne" size="30" required />
+                                                            </div>
+                                                            <div class="gdlr-core-newsletter-submit"><input class="newsletter-submit" type="submit" value="Subscribe" /></div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<?php
+include 'includes/footer.php';
+?>

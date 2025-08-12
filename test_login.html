@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Test</title>
+</head>
+<body>
+    <h2>Login Test Form</h2>
+    <form id="test-login-form">
+        <div>
+            <label>Username:</label>
+            <input type="text" name="username" id="username" value="student1" />
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" name="password" id="password" value="password123" />
+        </div>
+        <div>
+            <label>Role:</label>
+            <select name="role" id="role">
+                <option value="">Select Role</option>
+            </select>
+        </div>
+        <button type="submit">Test Login</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        // Load roles
+        fetch('API/role_API.php')
+        .then(response => response.json())
+        .then(data => {
+            const roleSelect = document.getElementById('role');
+            data.forEach(role => {
+                const option = document.createElement('option');
+                option.value = role.role_id;
+                option.textContent = role.role_name;
+                roleSelect.appendChild(option);
+            });
+        });
+
+        // Handle form submission
+        document.getElementById('test-login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = {
+                username: formData.get('username'),
+                password: formData.get('password'),
+                role: formData.get('role')
+            };
+            
+            console.log('Sending data:', data);
+            
+            fetch('API/login_API.php', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                console.log('Response status:', response.status);
+                return response.text();
+            })
+            .then(text => {
+                console.log('Raw response:', text);
+                const result = JSON.parse(text);
+                console.log('Parsed response:', result);
+                
+                document.getElementById('result').innerHTML = '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
+                
+                if (result.success) {
+                    alert('Login successful! Redirecting...');
+                    window.location.href = result.redirect;
+                } else {
+                    alert('Login failed: ' + result.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').innerHTML = '<p style="color: red;">Error: ' + error.message + '</p>';
+            });
+        });
+    </script>
+</body>
+</html> 

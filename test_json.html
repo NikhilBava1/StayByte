@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Test</title>
+</head>
+<body>
+    <h2>JSON Test</h2>
+    <button onclick="testJSON()">Test JSON</button>
+    <div id="result"></div>
+
+    <script>
+        function testJSON() {
+            const testData = {
+                username: 'student1',
+                password: 'password123',
+                role: '2'
+            };
+            
+            console.log('Sending data:', testData);
+            console.log('JSON string:', JSON.stringify(testData));
+            
+            fetch('process_login.php', {
+                method: 'POST',
+                body: JSON.stringify(testData),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.text())
+            .then(text => {
+                console.log('Raw response:', text);
+                document.getElementById('result').innerHTML = '<pre>' + text + '</pre>';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').innerHTML = '<p style="color: red;">Error: ' + error.message + '</p>';
+            });
+        }
+    </script>
+</body>
+</html> 
