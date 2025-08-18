@@ -1,7 +1,7 @@
 <?php
 $host = "dpg-d2hfcrndiees73efetp0-a.oregon-postgres.render.com";  
 $port = "5432";                        
-$dbname = "staybyte1_83s5";              
+$dbname = "staybyte1";              
 $user = "staybyte1_83s5_user";                 
 $password = "nPpzEff0iEOM0eloVjoc8ksdoK7dJPPx";          
 
