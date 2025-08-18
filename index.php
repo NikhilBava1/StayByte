@@ -1,17 +1,27 @@
 <?php
 
 include 'includes/header.php';
-include 'config/db.php';
+include 'config/db.php'; // isme ab $conn PDO instance return karega
 
-// Fetch rooms from database
-$sql = "SELECT * FROM rooms WHERE status = 'Active' LIMIT 6";
-$result = mysqli_query($conn, $sql);
-$rooms = mysqli_fetch_all($result, MYSQLI_ASSOC);
+try {
+    // Fetch rooms from database
+    $sql = "SELECT * FROM rooms WHERE status = 'Active' LIMIT 6";
+    $stmt = $conn->query($sql);
+    $rooms = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Fetch feedback from database
-$sql = "SELECT f.feedback_message, u.username FROM feedback f JOIN users u ON f.user_id = u.user_id ORDER BY f.id DESC LIMIT 30";
-$result = mysqli_query($conn, $sql);
-$feedbacks = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    // Fetch feedback from database
+    $sql = "SELECT f.feedback_message, u.username 
+            FROM feedback f 
+            JOIN users u ON f.user_id = u.user_id 
+            ORDER BY f.id DESC LIMIT 30";
+    $stmt = $conn->query($sql);
+    $feedbacks = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+} catch (PDOException $e) {
+    echo "❌ Query failed: " . $e->getMessage();
+    $rooms = [];
+    $feedbacks = [];
+}
 
 // Display login success/error messages
 if (isset($_SESSION['login_success'])) {
