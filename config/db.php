@@ -1,16 +1,22 @@
 <?php
 // Database configuration for admin panel
-$HOST = "dpg-d2hfcrndiees73efetp0-a.oregon-postgres.render.com";
+$host = "dpg-d2hfcrndiees73efetp0-a.oregon-postgres.render.com";
 $port = "5432";
-$DATABASE_NAME = "staybyte1_83s5";
-$USER = "staybyte1_83s5_user";
-$USER = "nPpzEff0iEOM0eloVjoc8ksdoK7dJPPx";
+$dbname = "staybyte1_83s5";
+$user = "staybyte1_83s5_user";
+$password = "nPpzEff0iEOM0eloVjoc8ksdoK7dJPPx";
 
-$conn = pg_connect("host=$HOST port=$port dbname=$DATABASE_NAME user=$USER password=$PASS");
+try {
+    // DSN (Data Source Name)
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;";
+    
+    // Create PDO instance
+    $conn = new PDO($dsn, $user, $password, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+    ]);
 
-if (!$conn) {
-     die("Connection failed: " . pg_last_error());
+    echo "✅ Connected to PostgreSQL successfully using PDO!";
+} catch (PDOException $e) {
+    echo "❌ Connection failed: " . $e->getMessage();
 }
 ?>
-
-
