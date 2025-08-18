@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: my-php-app
+    env: php
+    buildCommand: |
+      apt-get update && apt-get install -y php-pgsql
