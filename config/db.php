@@ -1,11 +1,16 @@
 <?php
-$db_host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$db_name = "staybyte1";
+$host = "dpg-d2hfcrndiees73efetp0-a.oregon-postgres.render.com";  
+$port = "5432";                        
+$dbname = "staybyte1_83s5";              
+$user = "staybyte1_83s5_user";                 
+$password = "nPpzEff0iEOM0eloVjoc8ksdoK7dJPPx";          
 
-$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+// Connection
+$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
 
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}       
+    die("Connection failed: " . pg_last_error());
+} else {
+    echo "Database connected successfully!";
+}
+?>
