@@ -4,8 +4,11 @@ FROM php:8.2-apache
 # Enable Apache mod_rewrite (optional, if your app needs it)
 RUN a2enmod rewrite
 
-# Install PHP extensions for MySQL support
-RUN docker-php-ext-install mysqli pdo pdo_mysql
+# Install system dependencies for PostgreSQL
+RUN apt-get update && apt-get install -y libpq-dev
+
+# Install PHP extensions for PostgreSQL support
+RUN docker-php-ext-install pgsql pdo pdo_pgsql
 
 # Copy your entire project into Apache's root directory
 COPY . /var/www/html/
