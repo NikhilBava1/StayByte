@@ -1,85 +1,69 @@
 <?php
 /**
- * Fetches the latest active news articles from the PostgreSQL database.
+ * Fetches the latest active news articles from the database using PDO.
  *
- * @param resource $conn The PostgreSQL database connection resource.
+ * @param PDO $conn The PDO database connection object.
  * @param int $limit The maximum number of news articles to retrieve.
  * @return array An array of news articles, each as an associative array.
  */
-function fetchNews($conn, $limit = 10) {
-    // SQL query using PostgreSQL syntax with a positional placeholder ($1).
-    $sql = 'SELECT news_id, title, image_url, publish_date FROM news WHERE status = \'Active\' ORDER BY publish_date DESC LIMIT $1';
+function fetchNews(PDO $conn, $limit = 10) {
+    // SQL query using a prepared statement placeholder (?).
+    // Note: No need to quote standard identifiers when using PDO with PostgreSQL.
+    $sql = 'SELECT news_id, title, image_url, publish_date FROM news WHERE status = \'Active\' ORDER BY publish_date DESC LIMIT ?';
 
-    // A unique name for the prepared statement
-    $statementName = "fetch_latest_news";
+    try {
+        // Prepare the statement using the PDO connection object.
+        $stmt = $conn->prepare($sql);
 
-    // Prepare the statement for execution.
-    $stmt = pg_prepare($conn, $statementName, $sql);
+        // Bind the limit parameter.
+        $stmt->bindParam(1, $limit, PDO::PARAM_INT);
 
-    // Check if the statement was prepared successfully
-    if (!$stmt) {
+        // Execute the statement.
+        $stmt->execute();
+        
+        // Fetch all resulting rows into an associative array.
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    } catch (PDOException $e) {
         // In a real application, you should log this error properly.
-        error_log("Failed to prepare statement: " . pg_last_error($conn));
+        error_log("Database error in fetchNews: " . $e->getMessage());
         return [];
     }
-
-    // Execute the prepared statement with the limit parameter.
-    $result = pg_execute($conn, $statementName, [$limit]);
-
-    // Check for execution errors
-    if (!$result) {
-        error_log("Failed to execute statement: " . pg_last_error($conn));
-        return [];
-    }
-    
-    // Fetch all resulting rows into an associative array.
-    $news = pg_fetch_all($result, PGSQL_ASSOC);
-    
-    // Free up the result memory.
-    pg_free_result($result);
-    
-    // If pg_fetch_all returns false (e.g., no rows found), return an empty array.
-    return $news ?: [];
 }
 
 /**
- * Fetches the latest feedback entries from the PostgreSQL database.
+ * Fetches the latest feedback entries from the database using PDO.
  *
- * @param resource $conn The PostgreSQL database connection resource.
+ * @param PDO $conn The PDO database connection object.
  * @param int $limit The maximum number of feedback entries to retrieve.
  * @return array An array of feedback entries.
  */
-function fetchFeedback($conn, $limit = 5) {
-    // SQL query using PostgreSQL syntax (double quotes for identifiers, $1 for placeholder).
+function fetchFeedback(PDO $conn, $limit = 5) {
+    // SQL query using a prepared statement placeholder (?).
     $sql = 'SELECT f.feedback_message, u.username, u.profile_pic 
             FROM feedback f 
             JOIN users u ON f.user_id = u.user_id 
             ORDER BY f.id DESC 
-            LIMIT $1';
+            LIMIT ?';
     
-    $statementName = "fetch_latest_feedback";
+    try {
+        // Prepare the statement.
+        $stmt = $conn->prepare($sql);
 
-    // Prepare the statement.
-    $stmt = pg_prepare($conn, $statementName, $sql);
-    if (!$stmt) {
-        error_log("Failed to prepare statement: " . pg_last_error($conn));
+        // Bind the limit parameter.
+        $stmt->bindParam(1, $limit, PDO::PARAM_INT);
+
+        // Execute the statement.
+        $stmt->execute();
+        
+        // Fetch all results.
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    } catch (PDOException $e) {
+        // Log the error.
+        error_log("Database error in fetchFeedback: " . $e->getMessage());
         return [];
     }
-
-    // Execute the statement.
-    $result = pg_execute($conn, $statementName, [$limit]);
-    if (!$result) {
-        error_log("Failed to execute statement: " . pg_last_error($conn));
-        return [];
-    }
-    
-    // Fetch all results.
-    $feedbacks = pg_fetch_all($result, PGSQL_ASSOC);
-    
-    // Free result memory.
-    pg_free_result($result);
-    
-    return $feedbacks ?: [];
 }
 
 
