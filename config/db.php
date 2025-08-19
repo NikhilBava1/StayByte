@@ -15,7 +15,7 @@ try {
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
 
-    echo "✅ Connected to PostgreSQL successfully using PDO!";
+   
 } catch (PDOException $e) {
     echo "❌ Connection failed: " . $e->getMessage();
 }
